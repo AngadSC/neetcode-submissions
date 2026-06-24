@@ -1,0 +1,12 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        min_price = prices[0]
+        best = 0 
+
+        for price in prices:
+             profit = price - min_price
+             best = max(best, profit)
+             min_price = min(price,min_price)
+
+        return best 
+        
